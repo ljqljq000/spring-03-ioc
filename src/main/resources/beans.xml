@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- 针对无参的构造方法，可以这样创建-->
+<!--        <bean id="user" class="com.kuang.pojo.user">-->
+<!--            <property name="name" value="kuangshen"/>-->
+<!--        </bean>-->
+
+<!--        以下三种针对有参构造函数-->
+<!--        <bean id="user" class="com.kuang.pojo.userT">-->
+<!--&lt;!&ndash;            index构造方法，下标从0开始，标的的构造方法的参数&ndash;&gt;-->
+<!--            <constructor-arg index="0" value="这里是赋给的值"></constructor-arg>-->
+<!--        </bean>-->
+
+
+<!--        根据参数的名字来设置-->
+<!--    <bean id="user" class="com.kuang.pojo.userT">-->
+<!--        <constructor-arg name="name" value="根据参数名字赋值的东西在这里"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    根据参数的类型来设置-->
+    <bean id="user" class="com.kuang.pojo.userT">
+        <constructor-arg type="java.lang.String" value="根据参数类型赋值的东西在这里"></constructor-arg>
+    </bean>
+<!--    这个用来表明，在加载配置文件的时候就应经将用例初始化了。即使在测试函数里面你根本没调用-->
+    <bean id="use" class="com.kuang.pojo.user"></bean>
+</beans>
